@@ -14,6 +14,10 @@
     "main";
 }
 
+canvas {
+    max-width: 100%;
+}
+
 h3{
     font-weight: 300;
 }
@@ -80,6 +84,15 @@ a
     fill:white;
 }
 
+.noti{
+    background-color:rgb(78, 219, 78);
+    width:5px;
+    height: 5px;
+    border-radius: 50%;
+    margin-bottom:50px;
+    margin-top:auto;
+}
+
 .bell:hover{
     cursor:pointer;
     animation: bell-shake 1.5s ease-in;
@@ -122,7 +135,6 @@ nav a img{
 .tab{
     background-color:rgb(250, 246, 246);
     height:3rem;
-    width:55vw;
     border:solid 1px lightgrey;
     border-right:none;
 }
@@ -149,14 +161,10 @@ nav a img{
     margin: 10px 10px 10px 20px;
     border-radius: 5px;
     color:white;
-    width:89vw;
 }
 
 .alert-banner-close:hover{
     cursor:pointer;
-}
-.alert{
-    width:98vw;
 }
 
     /************GRAPHS SECTION************/
@@ -168,12 +176,6 @@ nav a img{
     text-align:center;
 }
 
-.widget-container-full{
-    width:90vw;
-}
-.widget-container-half{
-    width:90vw;
-}
 
 .traffic-header{
     justify-content: space-between;
@@ -183,7 +185,6 @@ nav a img{
 .traffic-nav{
     display:flex;
     list-style: none;
-    width: 98vw;
     justify-content: space-evenly;
     padding:0px;
     margin-top:10px;
@@ -200,7 +201,6 @@ nav a img{
 .daily, .mobile, .traffic {
     border-bottom: solid lightgray 2px;
     padding:20px 0px 20px 0px;
-    width:98vw;
 }
 
 .daily h3, .mobile h3{
@@ -227,14 +227,13 @@ nav a img{
     border-radius: 5px;
     flex-grow:1;
     height:4rem;
-    margin: 10px 0px 10px 10px;
+    margin: 10px;
     align-items: center;
     padding:10px;
 }
 
 .social-wrap{
     display: flex;
-    width:98vw;
     flex-direction: column;
 }
 
@@ -264,9 +263,8 @@ nav a img{
 }
 .members-container, .member-inner-div{
     height:10rem;
-    text-align: center;
-    width:98vw;
     border-bottom: solid lightgray 1px;
+    text-align: center;
 }
 
 
@@ -282,8 +280,11 @@ nav a img{
 
 
 .members-text{
+    display:block;
     word-wrap: break-word;
     width:300px;
+    margin:0 auto;
+    text-align: center;
 }
 
 .members-container-1 p:last-child{
@@ -307,9 +308,10 @@ nav a img{
     margin:20px auto 0 20px;
 }
 
-.message{
-    width:98vw;
+.message {
+    margin-bottom:20px;
 }
+
 .form-field{
     display:block;
     width: 90%;
@@ -349,8 +351,8 @@ nav a img{
     margin:20px auto 0 20px;
 }
 
-.settings{
-    width:96vw;
+.settings {
+    border-top: solid lightgray 1px;
 }
 
 #timezone {
@@ -407,7 +409,7 @@ nav a img{
     display:none;
 }
 
-/*******WIDER SCREENS*********/
+    /*******768PX*********/
 @media (min-width:768px){
     .navigation {
     height:100%;
@@ -416,34 +418,55 @@ nav a img{
     justify-content: start;
     }
 
+    .members-container, .member-inner-div{
+        display:flex;
+        border-right: solid lightgray 1px; 
+        border-bottom: solid lightgray 1px;
+        height:5rem;
+        align-items: center;
+        text-align: left;
+    }
+
+    .members-container p:last-child{
+        display:block;
+        margin-right:10px;
+        margin-left:auto;
+    }
+
+    .members-text {
+        width:100%;
+        text-align: left;
+        margin:0px;
+    }
+
+    .members-container p{
+        margin:0px;
+    }
+
+    .members-container img, .member-inner-div img{
+        margin:20px;
+    }
+
     .profile-image{
         width:40px;
     }
 
-    .main-header{
-        width:98vw;
-    }
-
     .tab{
-        width: 60%;
-        display: none;
+        width: 85%;
     }
 
     .social-wrap{
         display:flex;
         flex-direction: row;
-        width:92vw;
-    }
-
-    .traffic-nav{
-
     }
     .mobile, .daily {
         border-left:solid lightgray 1px;
-        width:45vw;
     }
-    .activty, .members, .settings, .message, .recent-activity-headline, .traffic-nav, .traffic, .members-container,.member-inner-div, .social-wrap{
-        width:80vw;
+    .traffic-nav{
+        justify-content: end;
+    }
+    .head-wrap{
+        padding:10px;
     }
 
 }
@@ -508,18 +531,56 @@ nav a img{
         grid-column: 2 / span 1;
     }
 }
-    
-.widget-container-full{
-        width: 95vw;
-}
 
-@media (min-width: 768px){
-.widget-container-full{
-        width:80vw;
-}
-    
-.widget-container-half{
-        width:35vw;
+    /*******1024PX*********/
+@media(min-width:1024px){
+    .head-wrap{
+        height:5rem;
+        padding:10px;
+    }
+    .head-wrap h3{
+        font-size:20px;
+    }
+    .head-wrap img{
+        width:50px;
+    }
+    .head-wrap h1{
+        font-size:30px;
+    }
+    .bell{
+        width:30px;
+    }
+    .members {
+        grid-column: 1 / span 1;
+    }
+    .activity{
+        grid-column: 2 / span 1;
+    }
+    .message {
+        grid-column: 1 / span 1;
+    }
+    .settings{
+        grid-column: 2 / span 1;
     }
 
+    .message{
+        border-right:solid lightgray 1px;
+    }
+
+    .settings{
+        border-top: none;
+    }
+    
+    .members-container-1{
+        border-right: solid lightgray 1px;
+        border-top: solid lightgray 1px;
+    }
+
+    .member-inner-div{
+        border-right: none;
+    }
+
+    .new-members-headline{
+        border-top:none;
+    }
 }

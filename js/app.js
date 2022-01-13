@@ -1,6 +1,7 @@
 console.log("hello");
 
 const alertBanner = document.getElementById("alert");
+const bell = document.getElementById("bell");
 
 alertBanner.innerHTML = 
 `<div class="alert-banner">
