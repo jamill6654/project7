@@ -407,6 +407,8 @@ nav a img{
 }
 #arrow{
     display:none;
+    font-size:24px;
+    color:rgba(42, 56, 184, 0.61);
 }
 
     /*******768PX*********/
@@ -416,6 +418,10 @@ nav a img{
     width:55px;
     flex-direction: column;
     justify-content: start;
+    }
+
+    #arrow{
+        display:block;
     }
 
     .members-container, .member-inner-div{
@@ -468,72 +474,47 @@ nav a img{
     .head-wrap{
         padding:10px;
     }
-
-}
-
-
-@media (min-width:768px){
     .grid-container{
         grid-template-columns: 55px minmax(0, 1fr);
         grid-template-areas:
         "header header"
         "navigation main";
     }
-}
-
-@media (min-width:768px){
     .main{
         grid-template-columns: 50%;
     }
     .navigation{
         grid-template-columns:10%;
     }
-}
-
-@media (min-width:768px){
-.main-header{
-    grid-column:1 / span 2;
-}
-}
-
-@media(min-width:768px){
+    .main-header{
+        grid-column:1 / span 2;
+    }
     .social-wrap{
         grid-column: 1 / span 2;
     }
-}
-
-@media (min-width:768px){
     .alert{
         grid-column:1 / span 2;
     }
-    }
-
-@media (min-width: 768px){
     .traffic, .social{
         grid-column:1 / span 2;
     }
-}
-
-@media (min-width: 768px) {
     .members, .activity, .settings, .message{
         grid-column: 1 / span 2;
     }
-}
-    
-@media (min-width: 768px) {
     .daily{
         grid-column: 1 / span 1;
     }
-}
-
-@media(min-width: 768px){
     .mobile {
         grid-column: 2 / span 1;
     }
 }
+ 
 
     /*******1024PX*********/
 @media(min-width:1024px){
+    #arrow{
+        display:block;
+    }
     .head-wrap{
         height:5rem;
         padding:10px;

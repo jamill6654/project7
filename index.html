@@ -10,11 +10,10 @@
     <title>WebbApp</title>
 </head>
 
-
 <body class="grid-container">
     
     <!--HEADER-->
-    <header class = "header">
+    <header class = "header" id="home">
         <div class = "head-wrap">
         <h1>WebApp&trade;</h1>
         <div class="second-wrap">
@@ -33,10 +32,10 @@
 
     <!--NAV-->
     <nav class="navigation">
-        <a href=""><img src="svgs/home.svg" alt=""></a>
-        <a href=""><img src="svgs/bar-chart.svg" alt=""></a>
-        <a href=""><img src="svgs/members.svg" alt=""></a>
-        <a href=""><img src="svgs/settings.svg" alt=""></a>
+        <a href="#home"><img src="svgs/home.svg" alt=""></a>
+        <a href="#charts"><img src="svgs/bar-chart.svg" alt=""></a>
+        <a href="#members"><img src="svgs/members.svg" alt=""></a>
+        <a href="#settings"><img src="svgs/settings.svg" alt=""></a>
     </nav>
 
     <!--MAIN-->
@@ -49,7 +48,7 @@
     
         <div class="alert" id="alert"></div>
 
-        <section class="traffic">
+        <section class="traffic" id="charts">
             <div class="traffic-header">
                 <h3>TRAFFIC</h3>
                 <ul class="traffic-nav">
@@ -119,7 +118,7 @@
         </div>
     </div>
 
-        <section class="members">
+        <section class="members" id="members">
 
             <div class="members-container-1">
                 <h3 class="new-members-headline">New Members</h3>
@@ -216,7 +215,7 @@
                 </form>
             </section>
 
-            <section class = "settings">
+            <section class = "settings" id="settings">
                 <h3>Settings</h3>
                 <div class="slide">
                     <p>Send E-Mail Notifications</p>
